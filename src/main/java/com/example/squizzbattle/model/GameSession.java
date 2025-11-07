@@ -1,4 +1,5 @@
 package com.example.squizzbattle.model;
+import com.example.squizzbattle.utilities.GameStates;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -14,7 +15,7 @@ public class GameSession {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String status;
+    private GameStates status;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     @ManyToMany
