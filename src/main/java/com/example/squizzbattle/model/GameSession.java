@@ -1,5 +1,4 @@
 package com.example.squizzbattle.model;
-import com.example.squizzbattle.utilities.GameStates;
 import jakarta.persistence.*;
 import lombok.Data;
 

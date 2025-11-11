@@ -5,7 +5,7 @@ import com.example.squizzbattle.model.User;
 import com.example.squizzbattle.repository.GameSessionRepository;
 import com.example.squizzbattle.repository.PlayerSessionRepository;
 import com.example.squizzbattle.repository.QuestionRepository;
-import com.example.squizzbattle.utilities.GameStates;
+import com.example.squizzbattle.model.GameStates;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
