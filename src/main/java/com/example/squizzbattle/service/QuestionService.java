@@ -34,6 +34,10 @@ public class QuestionService {
         return questionRepository.save(question);
     }
 
+    public List<Question> getQuestionsByCategory(Question.Category category){
+        return  questionRepository.findByCategory(category);
+    }
+
     public Question getRandomQuestion(){
         List<Question> questions= questionRepository.findAll();
         if (questions.isEmpty()) {

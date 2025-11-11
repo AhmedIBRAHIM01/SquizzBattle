@@ -44,6 +44,10 @@ public class QuestionController {
         return question.map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+    @GetMapping("/category/{category}")
+    public List<Question> getQuestionsByCategory(@PathVariable Question.Category category) {
+        return questionService.getQuestionsByCategory(category);
+    }
 
     @DeleteMapping("/{questionId}")
     public ResponseEntity<Void> deleteQuestionById(@PathVariable Long questionId){
