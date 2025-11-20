@@ -31,6 +31,9 @@ public class QuestionService {
     }
 
     public Question addQuestion(Question question){
+        if (question.getDifficultyLevel() != null) {
+            question.setPoints(question.calculatePoints());
+        }
         return questionRepository.save(question);
     }
 
