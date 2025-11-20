@@ -40,7 +40,7 @@ public class GameService {
         return gameRepository.findAll();
     }
 
-    public List<GameSession> getGamesByStatus(String status){
+    public List<GameSession> getGamesByStatus(GameStates status){
         return gameRepository.findByStatus(status);
     }
 

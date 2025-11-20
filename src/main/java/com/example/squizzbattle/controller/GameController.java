@@ -1,6 +1,7 @@
 package com.example.squizzbattle.controller;
 
 import com.example.squizzbattle.model.GameSession;
+import com.example.squizzbattle.model.GameStates;
 import com.example.squizzbattle.model.User;
 import com.example.squizzbattle.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,7 @@ public class GameController {
     }
 
     @GetMapping("/status/{status}")
-    public ResponseEntity<List<GameSession>> getGamesByStatus(@PathVariable String status) {
+    public ResponseEntity<List<GameSession>> getGamesByStatus(@PathVariable GameStates status) {
         List<GameSession> games = gameService.getGamesByStatus(status);
         return ResponseEntity.ok(games);
     }
